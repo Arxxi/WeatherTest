@@ -1,0 +1,65 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url(/Images/background.jpg);
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.search-city {
+    margin-left: 10%;
+}
+
+.my-table {
+    margin: auto;
+    width: 80%;
+}
+
+button {
+    width: 100px;
+}
+
+.main-page {
+    text-align: center;
+}
+
+.main-content {
+    display: inline-block;
+}
+
+.main-div {
+    width: 20%;
+    margin: auto;
+}
+
+.error-div {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+.error-text {
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+}

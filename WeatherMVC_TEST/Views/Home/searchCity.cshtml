@@ -1,0 +1,49 @@
+﻿@model WeatherMVC_TEST.Models.WeatherInfo
+
+<div>
+    <div class="search-city">
+        <form method="post" action="/Home/searchCity">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">City name</span>
+                </div>
+                <input type="text" name="cityName" aria-label="City name" aria-describedby="inputGroup-sizing-default" value="@ViewData["Last_city"]" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+
+    @if ((string)ViewData["Warning_message_required"] != "")
+    {
+        <div>
+            <p>@ViewData["Warning_message_required"]</p>
+        </div>
+    }
+
+    <div>
+        <table class="table table-striped table-bordered table-dark my-table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">City name</th>
+                    <th scope="col">Min t&deg;C</th>
+                    <th scope="col">Max t&deg;C</th>
+                    <th scope="col">Precipitation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">@Html.DisplayFor(model => model.name)</th>
+                    <td>@Html.DisplayFor(model => model.main.temp_min)</td>
+                    <td>@Html.DisplayFor(model => model.main.temp_max)</td>
+                    <td>
+                        @foreach (var item in Model.weather)
+                        {
+                            <label>@Html.DisplayFor(m => item.main)</label>
+                        }
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

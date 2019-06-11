@@ -1,0 +1,11 @@
+﻿<div class="main-page">
+    <form method="post" action="/Home/searchCity">
+        <div class="input-group mb-3 main-div">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">City name</span>
+            </div>
+            <input type="text" name="cityName" aria-label="City name" aria-describedby="inputGroup-sizing-default" value="@ViewData["Last_city"]" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary main-content">Search</button>
+    </form>
+</div>
